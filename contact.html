@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
+<html lang="zh-TW"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日本花火大會體驗</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&amp;display=swap" rel="stylesheet">
     <style>
         body {
-            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background: url('https://djbcard.com/wp-content/uploads/2024/05/aumua-nzdak-1-1024x676.webp') no-repeat center center fixed;
             background-size: cover;
             color: #2d2d2d;
             font-family: 'Kiwi Maru', 'Noto Sans JP', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
@@ -36,7 +34,7 @@
             animation: hanabiFlash 1.2s infinite alternate;
         }
         @keyframes hanabiFlash {
-            0% { color: #b22222; text-shadow: 0 0 0 #fff, 0 0 0 #e3b04b; }
+            0% { color: #2e82e3; text-shadow: 0 0 0 #fff, 0 0 0 #e3b04b; }
             40% { color: #e3b04b; text-shadow: 0 0 24px #e3b04b, 0 0 8px #fff; }
             60% { color: #ce8dd6; text-shadow: 0 0 32px #ce8dd6, 0 0 12px #fff; }
             100% { color: #b22222; text-shadow: 0 0 0 #fff, 0 0 0 #e3b04b; }
@@ -49,9 +47,9 @@
             margin-bottom: 18px;
         }
         .btn {
-            background: linear-gradient(90deg, #e3b04b, #fffbe6);
-            color: #b22222;
-            border: 1px solid #e3b04b;
+            background: linear-gradient(90deg, #9d91e2, #fffbe6);
+            color: #292828;
+            border: 1px solid #665d9b;
             padding: 12px 32px;
             border-radius: 30px;
             font-size: 1.1em;
@@ -69,7 +67,7 @@
         }
         #hanabiMsg {
             font-size: 1.2em;
-            color: #e3b04b;
+            color: #9d91e2;
             margin-top: 16px;
             transition: opacity 0.5s, transform 0.5s;
             opacity: 0;
@@ -84,8 +82,8 @@
 <body>
     <div class="japan-card">
         <h1>日本花火大會體驗</h1>
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="日本花火" class="hanabi-img">
-        <p>在日本短期遊學期間，我有幸參加了盛大的花火大會。夜空中絢爛的煙火，搭配河畔的祭典氛圍，讓人感受到濃厚的日式夏季文化。大家身穿浴衣，品嚐著章魚燒、刨冰，與朋友們一同欣賞美麗的花火，留下難忘的回憶。</p>
+        <img src="https://static.gltjp.com/glt/data/article/21000/20297/20230420_131121_50b405c2_w1920.webp" alt="日本花火" class="hanabi-img">
+        <p>在日本短期遊學期間，我有幸參加了盛大的花火大會。夜空中絢爛的煙火，搭配河畔的祭典氛圍，讓人感受到濃厚的日式夏季文化。大家身穿浴衣，品嚐著章魚燒、刨冰，與朋友們一同欣賞美麗的花火，真的留下了很難忘的回憶。</p>
         <button class="btn" id="hanabiBtn">點我獲得花火大會小知識</button>
         <p id="hanabiMsg"></p>
         <a href="index.html" class="btn" style="margin-top:18px;">回首頁</a>
@@ -106,5 +104,6 @@
             setTimeout(()=>hanabiMsg.classList.remove('show'), 2500);
         };
     </script>
-</body>
-</html>
+
+
+</body></html>
