@@ -9,20 +9,115 @@
             height: 300px;
             background: linear-gradient(100deg,#f3daa4 25%, #dddcb2 75%);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        img{
-            max-width: 100%;
-            max-height: 100%;
+        .title{
+            width: 100%;
+            height: 200px;
+            background: rgba(229, 231, 239, 1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+            margin-top: 50px;
+            margin-bottom: 32px;
+        }
+        .color-block {
+            width: 100%;
+            height: 100%;
+            margin: 0 10px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hex-img {
+            width: 220px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            clip-path: polygon(
+                25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%
+            );
+            margin: 8px;
+        }
+        .hex-img img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
-
+        .color-block left{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .color-block center{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .color-block right{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2, p{
+            text-align: left;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+        h4{
+            text-align: center;
+            padding: 0 20px;
+        }
     </style>
 </head>
+
 <body>
-    <div>
-        <img src="nature.jpg" alt="自然風景">
+    <div class="title">
+        <h4>旅行相片一覽-div版</h4>
+    </div>
+    
+    <div class="color-block">
+        <div class="color-block left" style="background-color: rgba(169, 193, 240, 0.4);">
+            <div class="hex-img">
+                <img src="city1.jpg" alt="城市風景">
+            </div>
+            <div style="width:60%">
+                <h2>燈火璀璨的城市夜景</h2>
+                <p>從高處俯瞰城市，萬家燈火在夜幕中閃耀，街道與建築形成錯綜的光網。</p>
+            </div>
+        </div>
+    
+        <div class="color-block center" style="background-color: rgba(141, 156, 229, 0.4);">
+            <div class="hex-img">
+                <img src="city2.jpg" alt="城市風景">
+            </div>
+            <div style="width:60%">
+                <h2>熱鬧的街頭風情</h2>
+                <p>白天的街道上掛滿招牌與燈籠，五彩繽紛、充滿活力。</p>
+            </div>
+        </div>
+    
+        <div class="color-block right" style="background-color: rgba(219, 184, 243, 0.4);">
+            <div class="hex-img">
+                <img src="nature.jpg" alt="自然風景">
+            </div>
+            <div style="width:60%">
+                <h2>森林中的寧靜夜營</h2>
+                <p>在夕陽餘暉下，旁邊的營火燃燒著，散發出橙色光芒，映照出樹影與遠方的湖泊。</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
