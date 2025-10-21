@@ -9,10 +9,37 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
+
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("w3images/Demon_Slayer.jpg");
+  min-height: 90vh;
+}
 </style>
 </head>
 
 <body>
+    <!-- Sidebar (hidden by default) -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
+        style="display:none; z-index:2; width:40%; min-width:300px;" id="mySidebar"></nav>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+        <a href="#character" onclick="w3_close()" class="w3-bar-item w3-button">character</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+    </nav>
+
+    <!--Header-->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-bottomleft w3-padding">
+            <span class="w3-tag w3-xlarge">They're all mine`3ˊ </span>
+        </div>
+        <div class="w3-display-middle w3-center">
+            <span class="w3-text-white w3-hide-small" style="font-size:75px">My Darlings<br>in another world</span>
+            <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>My Darlings<br>in another world</b></span>
+            <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let's see my husbands</a></p>
+        </div>
+    </header>
 
 
 
