@@ -5,17 +5,17 @@
   <title>終止校園霸凌 — 資訊與求助</title>
   <meta name="description" content="校園霸凌介紹、類型、典型案件、處理方式與求助專線彙整（示範單頁）。">
   <style>
-    :root{--accent:#2b6cb0;--bg:#f7fbff;--card:#ffffff;--muted:#6b7280}
+    :root{--accent:#0d2c4e;--bg:#f7fbff;--card:#ffffff;--muted:#6b7280}
     *{box-sizing:border-box}
     body{margin:0;font-family: system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans TC',"Microsoft JhengHei",'Helvetica Neue', Arial;line-height:1.6;background:var(--bg);color:#111}
-    nav{background:linear-gradient(90deg,var(--accent),#63b3ed);color:#fff;padding:1rem 1.25rem;top:0;z-index:20}
+    nav{background:linear-gradient(90deg,var(--accent),#430000);color:#fff;padding:1rem 1.25rem;top:0;z-index:20}
     .container{max-width:960px;margin:0 auto;padding:1rem}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
     .logo{font-weight:700}
-    nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:0.75rem}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:0.75rem;font-size:20px}
     .hero{padding:3.25rem 1rem;text-align:center}
     h1{margin:0 0 .25rem;font-size:1.6rem}
-    p.lead{margin:0;color:rgba(255,255,255,0.95);opacity:0.95}
+    p.lead{margin:0;color:rgba(0, 0, 0, 0.95);opacity:0.95}
     main{padding:2rem 1rem}
     section{background:var(--card);border-radius:10px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 6px 18px rgba(9,30,66,0.08)}
     section h2{margin-top:0;color:var(--accent)}
@@ -33,10 +33,14 @@
     @media (max-width:720px){.grid{grid-template-columns:1fr}.hero{padding:2rem 1rem}h1{font-size:1.25rem}}
   </style>
 </head>
+
 <body>
+<!--navbar-->
   <nav>
-    <div class="container nav">
-      <div class="logo">終止校園霸凌</div>
+    <div class="container nav" style="align-items: left;">
+      <div class="logo">
+        <img src="no.png" style="width:80px;height:80px;">
+      </div>
       <a href="#intro">介紹</a>
       <a href="#types">霸凌種類</a>
       <a href="#cases">社會案件</a>
@@ -44,13 +48,141 @@
       <a href="#hotlines">求救專線</a>
     </div>
   </nav>
+<!--header-->
+  <header>
+    <img src="bully.png" style="width:100%">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title" class="hero-title" aria-live="polite" style="font-size: 40px">站出來！反霸凌！<br>從你我開始🫵🏻</h1>
+        <div id="animated-line" style="opacity: 0; transform: translateY(100px); transition: opacity 0.45s, transform 0.6s;">
+          <hr style="border: 1px solid var(--accent);">
+        </div>
+        <div id="animated-paragraph" style="opacity: 0; transform: translateY(100px); transition: opacity 0.45s, transform 0.6s;">
+          <p style="margin:1rem 0 1rem;color:rgba(0, 0, 0, 0.95);opacity:0.95;font-weight:600; font-family:'Segoe UI'">Together we can stand against bullying and create a community of respect and kindness. Whatever you face, you are not alone — support and hope are here for you.</p>
+        </div>
 
-  <section class="hero" aria-labelledby="page-title">
-    <div class="container">
-      <h1 id="page-title">校園霸凌：認識、預防與尋求協助</h1>
-      <p class="lead">本頁為一頁式資訊彙整，說明何謂霸凌、常見類型、實際案件概述，以及遭遇霸凌時可採取的行動與求助資源。若遇緊急情況請立即聯絡當地緊急專線。</p>
-    </div>
-  </section>
+        <script>
+          const line = document.getElementById('animated-line');
+          const paragraph = document.getElementById('animated-paragraph');
+
+          const observerOptions = {
+            root: null,
+            threshold: 0.1
+          };
+
+          const observerCallback = (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+          line.style.opacity = '1';
+          line.style.transform = 'translateY(0)';
+          paragraph.style.opacity = '1';
+          paragraph.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+              }
+            });
+          };
+
+          const observer = new IntersectionObserver(observerCallback, observerOptions);
+          observer.observe(line);
+          observer.observe(paragraph); // 監視段落
+        </script>
+        <style>
+          .hero-title{margin:0 0 .25rem;font-size:1.8rem;display:flex;justify-content:center;align-items:center;gap:.6rem;color:#000000;opacity:0.98}
+          .hero-title .typed{white-space:nowrap;border-right:2px solid rgba(255,255,255,0.95);padding-right:.4rem}
+          .fade-slide{animation:fadeSlide .5s ease both}
+          @keyframes fadeSlide{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+          @keyframes blinkCaret{50%{border-color:transparent}}
+          .hero-title .typed{animation:blinkCaret .8s steps(1) infinite}
+          /* 小螢幕調整 */
+          @media (max-width:720px){.hero-title{font-size:1.25rem}}
+        </style>
+
+        <script>
+        (function(){
+          const titles = [
+            '站出來！反霸凌！從你我開始🫵🏻'
+          ];
+          const el = document.getElementById('page-title');
+            // 簡單滑入文字（取第一個標題），然後結束 IIFE，跳過打字機效果
+            const text = titles[0] || '';
+            const span = document.createElement('span');
+            span.className = 'typed';
+            span.setAttribute('aria-hidden', 'false');
+            span.textContent = text;
+            span.style.display = 'inline-block';
+            span.style.transform = 'translateY(20px)';
+            span.style.opacity = '0';
+            span.style.transition = 'transform .60s ease, opacity .45s ease';
+            span.style.borderRight = '0'; // 取消打字機游標
+            el.innerHTML = '';
+            el.appendChild(span);
+            // 攔截下一個 requestAnimationFrame，等到使用者捲到該標題時再啟動動畫
+            const _raf = window.requestAnimationFrame;
+            let __deferredRaf = null;
+            window.requestAnimationFrame = function(cb){
+              __deferredRaf = cb;
+              return 0;
+            };
+
+            const ioOptions = { root: null, threshold: 0.25 };
+            if ('IntersectionObserver' in window) {
+              const io = new IntersectionObserver((entries, obs) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                // 還原 requestAnimationFrame 並執行被攔截的 callback（即啟動動畫）
+                window.requestAnimationFrame = _raf;
+                if (typeof __deferredRaf === 'function') __deferredRaf();
+                obs.unobserve(entry.target);
+                }
+              });
+              }, ioOptions);
+              io.observe(span);
+            } else {
+              // 若不支援 IntersectionObserver，則立即執行原本的動畫流程
+              window.requestAnimationFrame = _raf;
+              if (typeof __deferredRaf === 'function') __deferredRaf();
+            }
+            span.style.transform = 'translateY(100px)'; // 增加滑入幅度
+            requestAnimationFrame(() => {
+            span.style.transform = 'translateY(0)';
+            span.style.opacity = '1';
+            });
+            // 停止後續的打字機程式碼
+            return;
+          el.innerHTML = '<span class="typed" aria-hidden="false"></span>';
+          const typedEl = el.querySelector('.typed');
+          let idx = 0, char = 0, deleting = false, delay = 80;
+
+          function tick(){
+            const full = titles[idx];
+            if(!deleting){
+              char++;
+              typedEl.textContent = full.slice(0,char);
+              if(char === full.length){
+                deleting = true;
+                setTimeout(tick, 1400);
+                return;
+              }
+            } else {
+              char--;
+              typedEl.textContent = full.slice(0,char);
+              if(char === 0){
+                deleting = false;
+                idx = (idx + 1) % titles.length;
+              }
+            }
+            setTimeout(tick, deleting ? delay/2 : delay);
+          }
+
+          // 啟動動畫，並給予進場效果
+          el.classList.add('fade-slide');
+          setTimeout(tick, 300);
+        })();
+        </script>
+      </div>
+    </section>
+  </header>
+ 
 
   <main class="container">
     <section id="intro" aria-labelledby="intro-title">
@@ -147,12 +279,116 @@
         <p>進一步可閱讀：校園霸凌防治相關的教育主管機關公告、學術期刊與社福團體的實務手冊。鼓勵學校建立明確的通報與處理程序、定期防治教育課程，以及提供受害者安全與心理復原支援。</p>
       </div>
     </section>
-
   </main>
 
+  
   <footer>
-    <div class="container">本頁為教育性資源範例，內容僅供參考。如需我協助加入地區專線或真實新聞來源，請告訴我所在國家/縣市。</div>
+      <div style="text-align: right;">
+        <style>
+          #backToTop {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 999px;
+            border: 0;
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(9, 30, 66, 0.12);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 40;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .18s, transform .18s;
+          }
+    
+          #backToTop.show {
+            opacity: 1;
+            transform: translateY(0)
+          }
+    
+          #backToTop:focus {
+            outline: 2px solid rgba(255, 255, 255, 0.25)
+          }
+        </style>
+    
+        <button id="backToTop" type="button" aria-label="回到頁面頂部" title="回到頂部">
+          ↑
+        </button>
+    
+        <script>
+          (function () {
+            const btn = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+              if (window.scrollY > 200) btn.classList.add('show');
+              else btn.classList.remove('show');
+            });
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+          })();
+        </script>
+      </div>
   </footer>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+      <title>Bootstrap</title>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+      </path>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 16 16">
+      <path
+        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+      </path>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 16 16">
+      <path
+        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+      </path>
+    </symbol>
+  </svg>
+  
+  <div style="padding:0">
+    <div
+      style="display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;border-top:1px solid rgba(0,0,0,0.06);margin-top:0px;margin: 50px;">
+      <!-- 左側：Bootstrap 標誌與版權 -->
+      <div style="display:flex;align-items:center;gap:.5rem">
+        <a href="/" aria-label="Bootstrap"
+          style="display:inline-flex;align-items:center;text-decoration:none;color:inherit">
+          <svg class="bi" width="30" height="24" aria-hidden="true">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span style="color:var(--muted);font-size:.95rem">&copy; 2025 校園霸凌防治, Inc</span>
+      </div>
+  
+      <!-- 右側：社群圖示（IG / FB） -->
+      <ul style="display:flex;gap:1rem;list-style:none;margin:0;padding:0">
+        <li>
+          <a href="#" aria-label="Instagram"
+            style="color:var(--muted);text-decoration:none;display:inline-flex;align-items:center">
+            <svg class="bi" width="24" height="24" aria-hidden="true">
+              <use xlink:href="#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Facebook"
+            style="color:var(--muted);text-decoration:none;display:inline-flex;align-items:center">
+            <svg class="bi" width="24" height="24" aria-hidden="true">
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <script>  
     // 平滑捲動
