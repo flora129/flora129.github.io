@@ -7,19 +7,23 @@
   <style>
     :root{--accent:#0d2c4e;--bg:#f7fbff;--card:#ffffff;--muted:#6b7280}
     *{box-sizing:border-box}
-    body{margin:0;font-family: system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans TC',"Microsoft JhengHei",'Helvetica Neue', Arial;line-height:1.6;background:var(--bg);color:#111}
-    nav{background:linear-gradient(90deg,var(--accent),#430000);color:#fff;padding:1rem 1.25rem;top:0;z-index:20}
+    html,body{height:100%}
+    body{margin:0;font-family: system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans TC',"Microsoft JhengHei",'Helvetica Neue', Arial;line-height:1.6;background:var(--bg);color:#111;-webkit-text-size-adjust:100%}
+    /* global responsive images */
+    img{max-width:100%;height:auto;display:block}
+    nav{background:linear-gradient(90deg,var(--accent),#430000);color:#fff;padding:0.75rem 1rem;top:0;z-index:20}
     .container{max-width:960px;margin:0 auto;padding:1rem}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-    .logo{font-weight:700}
-    nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:0.75rem;font-size:20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .logo{font-weight:700;display:flex;align-items:center;gap:.5rem}
+    .logo img{width:68px;height:auto;border-radius:6px}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:0.75rem;font-size:18px}
     .hero{padding:3.25rem 1rem;text-align:center}
     h1{margin:0 0 .25rem;font-size:1.6rem}
     p.lead{margin:0;color:rgba(0, 0, 0, 0.95);opacity:0.95}
     main{padding:2rem 1rem}
     section{background:var(--card);border-radius:10px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 6px 18px rgba(9,30,66,0.08)}
     section h2{margin-top:0;color:var(--accent)}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
     .types li{margin-bottom:.6rem}
     .news-item{border-left:4px solid var(--accent);padding:.5rem .75rem;background:linear-gradient(180deg,rgba(99,179,237,0.05),transparent);margin-bottom:.75rem;border-radius:6px}
     .steps li{margin-bottom:.6rem}
@@ -29,13 +33,21 @@
     .accordion{border-top:1px solid #eef2f7}
     .accordion button{width:100%;text-align:left;padding:.6rem;border:0;background:none;font-weight:600;color:#0f172a;cursor:pointer}
     .panel{padding:0 .6rem 0.8rem;display:none;color:#111}
+    /* make long lists of nav links wrap on small screens and be easier to tap */
+    .nav a{padding:.35rem .45rem;border-radius:6px}
     /* responsive */
     @media (max-width:720px){
       .grid{grid-template-columns:1fr}
       .hero{padding:2rem 1rem}
       h1{font-size:1.25rem}
-      nav a{font-size:16px}
+      nav a{font-size:15px;margin-left:0.35rem}
       section{padding:1rem}
+      /* stack nav items: logo on left, links below */
+      .nav{justify-content:flex-start}
+      .nav a{width:auto}
+      .logo img{width:60px}
+      /* ensure hero title doesn't overflow */
+      .hero-title{font-size:1.25rem}
     }
   </style>
 </head>
@@ -43,9 +55,9 @@
 <body>
 <!--navbar-->
   <nav>
-    <div class="container nav" style="align-items: left;">
+    <div class="container nav">
       <div class="logo">
-        <img src="no.png" style="width:80px;height:80px;">
+        <img src="no.png" alt="site logo">
       </div>
       <a href="#intro">介紹</a>
       <a href="#types">霸凌種類</a>
@@ -59,7 +71,7 @@
     <img src="bully.png" style="width:100%">
     <section class="hero" aria-labelledby="page-title">
       <div class="container">
-        <h1 id="page-title" class="hero-title" aria-live="polite" style="font-size: 40px">站出來！反霸凌！<br>從你我開始🫵🏻</h1>
+  <h1 id="page-title" class="hero-title" aria-live="polite">站出來！反霸凌！<br>從你我開始🫵🏻</h1>
         <div id="animated-line" style="opacity: 0; transform: translateY(100px); transition: opacity 0.45s, transform 0.6s;">
           <hr style="border: 1px solid var(--accent);">
         </div>
@@ -213,7 +225,7 @@
             <li><strong>經濟或物質剝奪：</strong>勒索、強迫買東西、搶奪零用錢或物品等。</li>
           </ul>
         </div>
-        <img src="https://www.children.org.tw/uploads/news/2023/bully_(1).png" alt="校園霸凌主題圖" style="width:200%;align-items:center;margin-bottom:1.2rem;border-radius:10px;box-shadow:0 4px 16px rgba(43,108,176,0.10)">
+  <img src="https://www.children.org.tw/uploads/news/2023/bully_(1).png" alt="校園霸凌主題圖" style="width:100%;max-width:480px;margin:0 auto 1.2rem;border-radius:10px;box-shadow:0 4px 16px rgba(43,108,176,0.10)">
       </div>
     </section>
 
