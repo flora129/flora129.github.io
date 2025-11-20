@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>114 國北教大 教學科技應用設計競賽</title>
+  <meta name="description" content="國立臺北教育大學 114 教學科技應用設計競賽 — Uptale VR、AI 小工具、Apple 教育應用三組別，歡迎校內學生報名。">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<!--navbar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
+            aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+            <a class="navbar-brand col-lg-3 me-0" href="#">Centered nav</a>
+            <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                        aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                <button class="btn btn-primary">立即報名</button>
+            </div>
+        </div>
+    </div>
+    <!--三條線列表-->
+    <div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">活動宗旨</a>
+                <a href="#organizer">主辦單位</a>
+                <a href="#categories">競賽組別</a>
+                <a href="#eligibility">參加資格與規則</a>
+                <a href="#submission">繳件方式與檔案</a>
+                <a href="#timeline">重要時程</a>
+                <a href="#judging">評審標準</a>
+                <a href="#awards">獎項</a>
+                <a href="#notes">注意事項</a>
+                <a href="#contact">聯絡方式</a>
+            </div>
+        </div>
+            
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburger.addEventListener('click', () => {
+                // 切換顯示／隱藏 nav links
+                if (navLinks.style.display === 'flex') {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                }
+            });
+        </script>
+    </div>
+</nav>
+
+  
+
+<!--header-->
+  <header>
+    <div class="bgimg">
+      <span style="font-size:30px; color: transparent">1</span>
+      <span style="font-size:30px; color: transparent; margin-left: 0;">1</span>
+      <p class="subtitle" style="font-size:18px;margin-top: 480px;margin-left:180px;">鼓勵學生將 VR、AI 與 Apple 教育工具應用於教學場域，創新設計<br>具實作性的教學內容。</p>
+      <p class="cta" style="margin-left:300px; margin-top:30px;">
+        <a class="btn btn-primary text-light me-2" style="font-size:22px" href="https://forms.gle/Hs9SkDYpiAaB2J9p6" target="_blank" rel="noopener">報名參賽</a>
+        <a class="btn btn-dark" style="margin-left:20px; font-size:22px" href="#download">繳件說明</a>
+      </p>
+      
+    </div>
+  </header>
+
+<!--content-->
+  <main >
+    <div style="flex-direction:row;">
+        <div id="about">
+            <h2>活動宗旨</h2>
+            <p>為鼓勵學生將數位科技應用於教學現場，強化教材設計與創作能力，特舉辦本競賽，期望學生能靈活運用 VR、AI 技術及 Apple 教育工具，並結合數位媒體、互動設計及多元評量方式，設計具創新性與實用性的教學應用。</p>
+        </div>
+
+        <div id="organizer">
+            <h2>主辦單位</h2>
+            <p>主辦：國立臺北教育大學 教學發展中心</p>
+        </div>
+    </div>
+
+    <section id="categories">
+      <h2>競賽組別</h2>
+      <div class="cards row g-3">
+        <article class="col-md-4">
+          <h3>Uptale VR 教學應用設計組</h3>
+          <p>設計沉浸式教學場景，展現虛擬實境於教學現場之應用潛能，可結合國小課程或教育議題。</p>
+        </article>
+        <article class="col-md-4">
+          <h3>AI 小工具教學創新應用組</h3>
+          <p>運用 ChatGPT、生成式 AI 或學習分析工具等，解決學習難題或提升學習成效。</p>
+        </article>
+        <article class="col-md-4">
+          <h3>Apple 教育應用設計組</h3>
+          <p>可提交結合 iPad / Mac 的教案設計或應用程式原型（例如使用 Swift / Swift Playgrounds）。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="eligibility">
+      <h2>參加資格與規則</h2>
+      <ul>
+        <li>參加對象：本校在學學生（含學士班、碩士班、碩士在職專班）。</li>
+        <li>每團隊 1 至 4 人，可邀請 1 名指導老師。</li>
+        <li>每位學生最多可報名 2 件作品，同一作品不得重複投件於不同類別。</li>
+      </ul>
+    </section>
+
+    <section id="submission">
+      <h2 id="download">繳件方式與檔案</h2>
+      <ol>
+        <li>計畫書（PDF）：包含組別、作品名稱、團隊介紹、創作理念、教學目標、教學內容規劃、預期成效。</li>
+        <li>成品：如 Uptale VR 成品、AI 工具 Demo、Apple 教案或應用程式原型。</li>
+        <li>作品導覽影片（mp4，10 分鐘內，HD1080P），上傳至 YouTube 並提供連結。</li>
+        <li>個人資料保護聲明暨數位內容授權書。</li>
+      </ol>
+      <p>請將所有檔案命名為：編號_團隊名_作品名_檔名，並壓縮為 zip 後上傳：</p>
+      <p><a href="https://forms.gle/PQ1AEJ1xBo3yRTZd6" target="_blank" rel="noopener">檔案上傳（繳件）表單</a></p>
+    </section>
+
+    <section id="timeline">
+      <h2>重要時程</h2>
+      <ul class="timeline">
+        <li><strong>報名截止：</strong>114 年 11 月 7 日（五）</li>
+        <li><strong>繳件截止：</strong>114 年 12 月 14 日（日）</li>
+        <li><strong>得獎公布：</strong>預計 115 年 1 月底於「教學發展中心」網站公布，並 Email 或電話通知。</li>
+      </ul>
+    </section>
+
+    <section id="judging">
+      <h2>評審標準</h2>
+      <ul>
+        <li>完整性 — 40%</li>
+        <li>創意表現及互動應用 — 30%</li>
+        <li>實踐效益及未來延展性 — 30%</li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2>獎項</h2>
+      <p>各類別分別設置：</p>
+      <ul>
+        <li>特優（1 件）：獎金新台幣 8,000 元，獎狀每人 1 張。</li>
+        <li>優選（1 件）：獎金新台幣 5,000 元，獎狀每人 1 張。</li>
+        <li>佳作（2 件）：獎金新台幣 2,000 元，獎狀每人 1 張。</li>
+      </ul>
+      <p>主辦單位得視參賽件數或作品水準調整獲獎情形。</p>
+    </section>
+
+    <section id="notes">
+      <h2>注意事項</h2>
+      <ol>
+        <li>作品需為參賽者／隊伍自行開發，若涉及智慧財產權侵害，將取消參賽資格並追究相關法律責任。</li>
+        <li>使用非原創素材時，須註明來源（圖片、音樂等）。</li>
+        <li>著作人格權歸參賽隊伍，但主辦單位得為推廣與教育目的行使重製、修改、下載及公開展示等著作財產權。</li>
+      </ol>
+    </section>
+
+    <section id="contact">
+      <h2>聯絡方式</h2>
+      <p>主辦單位：國立臺北教育大學 教學發展中心</p>
+      <p>如有問題，請以活動網頁公告或學校內部信箱與主辦單位聯繫（以主辦單位公告為準）。</p>
+    </section>
+<!--footer-->
+    <footer class="site-footer">
+      <p>經費來源：教育部高教深耕計畫經費支應 • 本競賽為非營利教育性質</p>
+      <p class="small">（本文內容依主辦單位提供之實施辦法撰寫）</p>
+    </footer>
+  </main>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
+</body>
+</html>
