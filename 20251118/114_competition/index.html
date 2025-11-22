@@ -100,35 +100,51 @@
 
 <!--content-->
   <main >
-    <div style="flex-direction:row;">
-        <div id="about">
+    <div class="cards row g-3" style="height:400px; background:linear-gradient(130deg,#1f1f1f 50%,hsl(195, 3%, 25%)); color: #ffffff;">
+        <div id="about" class="col-md-4" style="margin-left:130px; padding:20px; ">
             <h2>活動宗旨</h2>
             <p>為鼓勵學生將數位科技應用於教學現場，強化教材設計與創作能力，特舉辦本競賽，期望學生能靈活運用 VR、AI 技術及 Apple 教育工具，並結合數位媒體、互動設計及多元評量方式，設計具創新性與實用性的教學應用。</p>
         </div>
 
-        <div id="organizer">
+        <div id="organizer" class="col-md-4" style="margin-left:130px; padding:20px;">
             <h2>主辦單位</h2>
             <p>主辦：國立臺北教育大學 教學發展中心</p>
         </div>
     </div>
 
-    <section id="categories">
-      <h2>競賽組別</h2>
-      <div class="cards row g-3">
-        <article class="col-md-4">
-          <h3>Uptale VR 教學應用設計組</h3>
-          <p>設計沉浸式教學場景，展現虛擬實境於教學現場之應用潛能，可結合國小課程或教育議題。</p>
-        </article>
-        <article class="col-md-4">
-          <h3>AI 小工具教學創新應用組</h3>
-          <p>運用 ChatGPT、生成式 AI 或學習分析工具等，解決學習難題或提升學習成效。</p>
-        </article>
-        <article class="col-md-4">
-          <h3>Apple 教育應用設計組</h3>
-          <p>可提交結合 iPad / Mac 的教案設計或應用程式原型（例如使用 Swift / Swift Playgrounds）。</p>
-        </article>
-      </div>
-    </section>
+<div id="categories" style="margin-bottom:20px; height: 600px; background:linear-gradient(130deg,hsl(195, 3%, 25%),#1f1f1f 50%); color: #ffffff; padding:20px;">
+    <h2 style="margin: 30px;">競賽組別</h2>
+    <div style="display: flex;  justify-content: space-around; flex-direction: row;">
+        <div class="category-column">
+            <div class="category-text" style="margin: left 30px;">
+                <h3>Uptale VR 教學設計組</h3>
+                <p>利用 Uptale 平台設計 VR 教學內容，提升學生學習動機與成效。</p>
+            </div>
+            <div class="category-image">
+                <img src="VR.svg" alt="…圖示…" class="clip-circle">
+            </div>
+        </div>
+        <div class="category-column">
+            <div class="category-text">
+                <h3>AI 小工具教學創新應用組</h3>
+                <p>運用 ChatGPT、生成式 AI 或學習分析工具等，解決學習難題或提升學習成效。</p>
+            </div>
+            <div class="category-image">
+                <img src="VR.svg" alt="…圖示…" class="clip-circle">
+            </div>
+        </div>
+
+        <div class="category-column">
+            <div class="category-text">
+                <h3>Apple 教育應用設計組</h3>
+                <p>利用 Apple 教育工具（如 Keynote、iMovie、GarageBand、Swift Playgrounds 等）設計教學內容或應用程式原型。</p>
+            </div>
+            <div class="category-image">
+                <img src="VR.svg" alt="…圖示…" class="clip-circle">
+            </div>
+        </div>
+    </div>
+</div>
 
     <section id="eligibility">
       <h2>參加資格與規則</h2>
