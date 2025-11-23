@@ -18,31 +18,37 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-            <a class="navbar-brand col-lg-3 me-0" href="#">Centered nav</a>
+            <a class="navbar-brand col-lg-3 me-0" href="#"><img src="ntue1.png" style="width: 55px; height: 55px;">NTUE</a>
             <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                        aria-expanded="false">Link</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://forms.gle/Hs9SkDYpiAaB2J9p6" target="_blank" rel="noopener">報名</a></li>
+                        <li>
+                            <a class="dropdown-item" href="https://forms.gle/PQ1AEJ1xBo3yRTZd6" target="_blank" rel="noopener">繳件</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                         aria-expanded="false">Dropdown</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#timeline">重要時程</a></li>
                         <li>
-                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#judging">評審標準</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="#awards">獎項</a>
                         </li>
                     </ul>
                 </li>
             </ul>
             <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                <button class="btn btn-primary">立即報名</button>
+                <a class="btn btn-primary" href="https://forms.gle/Hs9SkDYpiAaB2J9p6" target="_blank" rel="noopener">立即報名</a>
             </div>
         </div>
     </div>
@@ -100,124 +106,188 @@
 
 <!--content-->
   <main >
-    <div class="cards row g-3" style="height:400px; background:linear-gradient(130deg,#1f1f1f 50%,hsl(195, 3%, 25%)); color: #ffffff;">
-        <div id="about" class="col-md-4" style="margin-left:130px; padding:20px; ">
+    <div style="display: flex;flex-direction: row;height:500px; background:linear-gradient(130deg,#1f1f1f 50%,hsl(195, 3%, 25%)); color: #ffffff;">
+        <div id="about" class="col-md-4" style="margin-left:130px; padding:20px; margin-top: 45px; line-height: 50px; font-size: 18px;">
             <h2>活動宗旨</h2>
             <p>為鼓勵學生將數位科技應用於教學現場，強化教材設計與創作能力，特舉辦本競賽，期望學生能靈活運用 VR、AI 技術及 Apple 教育工具，並結合數位媒體、互動設計及多元評量方式，設計具創新性與實用性的教學應用。</p>
         </div>
 
-        <div id="organizer" class="col-md-4" style="margin-left:130px; padding:20px;">
-            <h2>主辦單位</h2>
-            <p>主辦：國立臺北教育大學 教學發展中心</p>
+        <div class="category-column">
+            <div id="organizer" class="category-text" style="margin-left:130px; margin-top: 20px; font-size: 18px;">
+                <h2>主辦單位</h2>
+                <p>主辦：國立臺北教育大學 教學發展中心</p>
+            </div>
+            <div class="category-image">
+                <img src="ntue.jpg" style="width:400px; height:300px; object-fit: cover; margin-left: 250px;" >
+            </div>
         </div>
     </div>
 
-<div id="categories" style="margin-bottom:20px; height: 600px; background:linear-gradient(130deg,hsl(195, 3%, 25%),#1f1f1f 50%); color: #ffffff; padding:20px;">
-    <h2 style="margin: 30px;">競賽組別</h2>
-    <div style="display: flex;  justify-content: space-around; flex-direction: row;">
-        <div class="category-column">
-            <div class="category-text" style="margin: left 30px;">
-                <h3>Uptale VR 教學設計組</h3>
-                <p>利用 Uptale 平台設計 VR 教學內容，提升學生學習動機與成效。</p>
-            </div>
-            <div class="category-image">
-                <img src="VR.svg" alt="…圖示…" class="clip-circle">
-            </div>
-        </div>
-        <div class="category-column">
-            <div class="category-text">
-                <h3>AI 小工具教學創新應用組</h3>
-                <p>運用 ChatGPT、生成式 AI 或學習分析工具等，解決學習難題或提升學習成效。</p>
-            </div>
-            <div class="category-image">
-                <img src="VR.svg" alt="…圖示…" class="clip-circle">
-            </div>
-        </div>
-
-        <div class="category-column">
-            <div class="category-text">
-                <h3>Apple 教育應用設計組</h3>
-                <p>利用 Apple 教育工具（如 Keynote、iMovie、GarageBand、Swift Playgrounds 等）設計教學內容或應用程式原型。</p>
-            </div>
-            <div class="category-image">
-                <img src="VR.svg" alt="…圖示…" class="clip-circle">
-            </div>
-        </div>
+<div id="categories" style="height: 600px; background:linear-gradient(130deg,hsl(195, 3%, 25%),#1f1f1f 50%); color: #ffffff; padding:20px;">
+  <h2 style="margin: 30px;">競賽組別</h2>
+  <div style="display: flex;  justify-content: space-around; flex-direction: row;">
+    <div class="category-column">
+      <div class="category-text" style="margin: left 30px;">
+        <h3>Uptale VR 教學設計組</h3>
+        <p>利用 Uptale 平台設計 VR 教學內容，提升學生學習動機與成效。</p>
+      </div>
+      <div class="category-image">
+        <img src="VR.svg" alt="…圖示…" class="clip-circle">
+      </div>
     </div>
+    <div class="category-column">
+      <div class="category-text">
+        <h3>AI 小工具教學創新應用組</h3>
+        <p>運用 ChatGPT、生成式 AI 或學習分析工具等，解決學習難題或提升學習成效。</p>
+      </div>
+      <div class="category-image">
+        <img src="ai.webp" alt="…圖示…" class="clip-circle">
+      </div>
+    </div>
+
+    <div class="category-column">
+      <div class="category-text">
+        <h3>Apple 教育應用設計組</h3>
+        <p>利用 Apple 教育工具（如 Keynote、iMovie、GarageBand、Swift Playgrounds 等）設計教學內容或應用程式原型。</p>
+      </div>
+      <div class="category-image">
+        <img src="apple.webp" alt="…圖示…" class="clip-circle">
+      </div>
+    </div>
+  </div>
 </div>
 
-    <section id="eligibility">
-      <h2>參加資格與規則</h2>
-      <ul>
+    <div id="eligibility" style="height:270px;margin-bottom: 0;background:linear-gradient(130deg,#1f1f1f 50%,hsl(195, 3%, 25%)); color: #ffffff;">
+      <h2 style="margin-left:570px; padding: 30px;">參加資格與規則</h2>
+      <ul style="margin-left:450px; font-size: 18px; line-height: 40px;">
         <li>參加對象：本校在學學生（含學士班、碩士班、碩士在職專班）。</li>
         <li>每團隊 1 至 4 人，可邀請 1 名指導老師。</li>
         <li>每位學生最多可報名 2 件作品，同一作品不得重複投件於不同類別。</li>
       </ul>
-    </section>
+    </div>
 
-    <section id="submission">
-      <h2 id="download">繳件方式與檔案</h2>
-      <ol>
+    <div id="submission" style="height:400px;margin-bottom: 0;background:linear-gradient(130deg,hsl(195, 3%, 25%),#1f1f1f 50%); color: #ffffff">
+      <h2 id="download" style="margin-left:570px; padding: 30px;">繳件方式與檔案</h2>
+      <ol style="margin-left:400px; font-size: 18px; line-height: 40px;">
         <li>計畫書（PDF）：包含組別、作品名稱、團隊介紹、創作理念、教學目標、教學內容規劃、預期成效。</li>
         <li>成品：如 Uptale VR 成品、AI 工具 Demo、Apple 教案或應用程式原型。</li>
         <li>作品導覽影片（mp4，10 分鐘內，HD1080P），上傳至 YouTube 並提供連結。</li>
         <li>個人資料保護聲明暨數位內容授權書。</li>
       </ol>
-      <p>請將所有檔案命名為：編號_團隊名_作品名_檔名，並壓縮為 zip 後上傳：</p>
-      <p><a href="https://forms.gle/PQ1AEJ1xBo3yRTZd6" target="_blank" rel="noopener">檔案上傳（繳件）表單</a></p>
-    </section>
+      <p style="margin-left:400px;">請將所有檔案命名為：編號_團隊名_作品名_檔名，並壓縮為 zip 後上傳：</p>
+      <p style="margin-left:400px;"><a href="https://forms.gle/PQ1AEJ1xBo3yRTZd6" target="_blank" rel="noopener">檔案上傳（繳件）表單</a></p>
+    </div>
 
-    <section id="timeline">
-      <h2>重要時程</h2>
-      <ul class="timeline">
+    <div id="timeline" style="height:300px;margin-bottom: 0;background:linear-gradient(130deg,#1f1f1f 50%,hsl(195, 3%, 25%)); color: #ffffff;">
+      <h2 style="margin-left:620px; padding: 30px;">重要時程</h2>
+      <ul class="timeline" style="margin-left:400px; font-size: 18px; line-height: 40px;">
         <li><strong>報名截止：</strong>114 年 11 月 7 日（五）</li>
         <li><strong>繳件截止：</strong>114 年 12 月 14 日（日）</li>
         <li><strong>得獎公布：</strong>預計 115 年 1 月底於「教學發展中心」網站公布，並 Email 或電話通知。</li>
       </ul>
-    </section>
+    </div>
 
-    <section id="judging">
-      <h2>評審標準</h2>
-      <ul>
-        <li>完整性 — 40%</li>
-        <li>創意表現及互動應用 — 30%</li>
-        <li>實踐效益及未來延展性 — 30%</li>
-      </ul>
-    </section>
+    <div id="judging" style="display:flex; flex-direction:row; height:400px;margin-bottom: 0;background:linear-gradient(130deg,hsl(195, 3%, 25%),#1f1f1f 50%); color: #ffffff">
+      <div>
+        <h2 style="margin-left:280px; padding: 30px;">評審標準</h2>
+        <ul style="margin-left:280px; font-size: 18px; line-height: 40px">
+          <li>完整性 — 40%</li>
+          <li>創意表現及互動應用 — 30%</li>
+          <li>實踐效益及未來延展性 — 30%</li>
+        </ul>
+      </div>
+      <div>
+        <img src="jugi.gif" style="padding: 0;margin-right:50px;margin-left:200px;width:600px; height:400px; object-fit: cover; " >
+      </div>
+    </div>
 
-    <section id="awards">
-      <h2>獎項</h2>
-      <p>各類別分別設置：</p>
-      <ul>
+    <div id="awards" style="height:400px;margin-bottom: 0;background:linear-gradient(130deg,#1f1f1f 50%,hsl(195, 3%, 25%)); color: #ffffff;">
+      <h2 style="margin-left:630px; padding: 30px;">獎項</h2>
+      <p style="margin-left:500px; font-size: 18px; line-height: 40px;">各類別分別設置：</p>
+      <ul style="margin-left:500px; font-size: 18px; line-height: 40px;">
         <li>特優（1 件）：獎金新台幣 8,000 元，獎狀每人 1 張。</li>
         <li>優選（1 件）：獎金新台幣 5,000 元，獎狀每人 1 張。</li>
         <li>佳作（2 件）：獎金新台幣 2,000 元，獎狀每人 1 張。</li>
       </ul>
-      <p>主辦單位得視參賽件數或作品水準調整獲獎情形。</p>
-    </section>
+      <p style="margin-left:500px; font-size: 18px; line-height: 40px;">主辦單位得視參賽件數或作品水準調整獲獎情形。</p>
+    </div>
 
-    <section id="notes">
-      <h2>注意事項</h2>
-      <ol>
+    <div id="notes" style="height:300px;margin-bottom: 0;background:linear-gradient(130deg,hsl(195, 3%, 25%),#1f1f1f 50%); color: #ffffff">
+      <h2 style="margin-left:620px; padding: 30px;">注意事項</h2>
+      <ol style="margin-left:400px; font-size: 18px; line-height: 40px;">
         <li>作品需為參賽者／隊伍自行開發，若涉及智慧財產權侵害，將取消參賽資格並追究相關法律責任。</li>
         <li>使用非原創素材時，須註明來源（圖片、音樂等）。</li>
         <li>著作人格權歸參賽隊伍，但主辦單位得為推廣與教育目的行使重製、修改、下載及公開展示等著作財產權。</li>
       </ol>
-    </section>
+    </div>
 
-    <section id="contact">
-      <h2>聯絡方式</h2>
-      <p>主辦單位：國立臺北教育大學 教學發展中心</p>
-      <p>如有問題，請以活動網頁公告或學校內部信箱與主辦單位聯繫（以主辦單位公告為準）。</p>
-    </section>
+    <div id="contact" style="height:300px;margin-bottom: 0;background:linear-gradient(130deg,#1f1f1f 50%,hsl(195, 3%, 25%)); color: #ffffff;">
+      <h2 style="margin-left:620px; padding: 30px;">聯絡方式</h2>
+      <p style="margin-left:400px; font-size: 18px; line-height: 40px;">主辦單位：國立臺北教育大學 教學發展中心</p>
+      <p style="margin-left:400px; font-size: 18px; line-height: 40px;">如有問題，請以活動網頁公告或學校內部信箱與主辦單位聯繫（以主辦單位公告為準）。</p>
+    </div>
 <!--footer-->
-    <footer class="site-footer">
-      <p>經費來源：教育部高教深耕計畫經費支應 • 本競賽為非營利教育性質</p>
-      <p class="small">（本文內容依主辦單位提供之實施辦法撰寫）</p>
-    </footer>
-  </main>
+<footer>
+  <div style="text-align: right;">
+    <style>
+      #backToTop {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        width: 48px;
+        height: 48px;
+        border-radius: 999px;
+        border: 0;
+        background: var(--accent);
+        color: #fff;
+        box-shadow: 0 6px 18px rgba(9, 30, 66, 0.12);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        z-index: 40;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity .18s, transform .18s;
+      }
+
+      #backToTop.show {
+        opacity: 1;
+        transform: translateY(0)
+      }
+
+      #backToTop:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.25)
+      }
+    </style>
+
+    <button id="backToTop" type="button" aria-label="回到頁面頂部" title="回到頂部">
+      ↑
+    </button>
+
+    <script>
+      (function () {
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 200) btn.classList.add('show');
+          else btn.classList.remove('show');
+        });
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      })();
+    </script>
+  </div>
+</footer>
+
+<footer class="site-footer">
+  <p>經費來源：教育部高教深耕計畫經費支應 • 本競賽為非營利教育性質</p>
+  <p class="small">（本文內容依主辦單位提供之實施辦法撰寫）</p>
+</footer>
+</main>
 </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>
 </body>
+
 </html>
