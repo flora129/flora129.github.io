@@ -132,3 +132,34 @@ h2{margin-top:0}
         background-color: #fefcf5;
     }
 }
+
+
+/* 圖片響應式處理 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 一般內容容器 */
+.section {
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 競賽組別三欄在桌機，手機上變一欄 */
+@media (max-width: 767px) {
+  .category‐container {  /* 假設你為三組的外層加 class="category‐container" */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .category‐column {
+    width: 90%; /* 寬度用百分比較好 */
+    margin-bottom: 20px;
+  }
+  /* 移除固定 margin-left */
+  .category‐text, .category‐image {
+    margin-left: 0 !important;
+  }
+}
