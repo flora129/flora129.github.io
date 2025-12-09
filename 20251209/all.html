@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本網頁架構</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        nav { background: #4CAF50; color: #fff; padding: 1em; }
+        header { background: #f1f1f1; padding: 2em 1em; text-align: center; }
+        main { padding: 2em 1em; min-height: 300px; }
+        footer { background: #333; color: #fff; text-align: center; padding: 1em; }
+        @keyframes bounce {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(-10px); }
+        }
+        nav a:hover {
+          background: none !important;
+        }
+        .dropdown-link {
+          display:block; padding:1em; color:#222; text-decoration:none; border-bottom:1px solid #e0d7fa; font-weight:600; transition:background 0.2s;
+        }
+        .dropdown-link:last-child { border-bottom:none; }
+        .dropdown-link:hover {
+          background: #e6e0fa !important;
+        }
+    </style>
+</head>
+
+<body>
+<!--navbar-->
+    <nav style="display: flex; align-items: center; justify-content: space-between; background: linear-gradient(90deg, #b6c6f5 0%, #a18cd1 100%); color: #222; padding: 1em 2em; box-shadow: 0 4px 16px rgba(161,140,209,0.10); border-radius: 0 0 24px 24px;">
+    <!-- 左側 Logo -->
+    <div style="width:110px; animation: bounce 1.2s infinite alternate;">
+        <img src="logo.png" alt="我的Logo" style="width:90px; vertical-align: middle; border-radius:50%; box-shadow:0 2px 8px rgba(161,140,209,0.15);">
+    </div>
+    <!-- 中間連結 -->
+    <div style="display:flex; gap:2em;">
+        <a href="#about" style="color: #222; text-decoration: none; font-weight:700; font-size:1.2em; padding:0.5em 1em; border-radius:8px; transition: background 0.2s; background:none;">自我介紹</a>
+        <a href="#works" style="color: #222; text-decoration: none; font-weight:700; font-size:1.2em; padding:0.5em 1em; border-radius:8px; transition: background 0.2s; background:none;">作品展示</a>
+        <a href="#contact" style="color: #222; text-decoration: none; font-weight:700; font-size:1.2em; padding:0.5em 1em; border-radius:8px; transition: background 0.2s; background:none;">聯絡方式</a>
+    </div>
+    <!-- 右側三條線下拉選單 -->
+    <div style="position:relative;">
+        <button id="menuBtn" style="background:linear-gradient(90deg,#a18cd1,#b6c6f5); border:none; cursor:pointer; font-size:2.2em; color:#222; padding:0.3em 0.7em; border-radius:12px; box-shadow:0 2px 8px rgba(161,140,209,0.10); transition:background 0.2s;">&#9776;</button>
+        <div id="dropdownMenu" style="display:none; position:absolute; right:0; top:2.8em; background:#f6f3ff; box-shadow:0 4px 16px rgba(161,140,209,0.18); min-width:200px; border-radius:16px; overflow:hidden;">
+            <a href="../20250930/index.html" target="_blank" class="dropdown-link">20250930：插畫作品</a>
+            <a href="../20251007/index.html" target="_blank" class="dropdown-link">20251007：攝影作品</a>
+            <a href="../20251014/namecard.html" target="_blank" class="dropdown-link">20251014：名片設計</a>
+            <a href="../20251021/index.html" target="_blank" class="dropdown-link">20251021：主題網頁</a>
+            <a href="../20251118/index.html" target="_blank" class="dropdown-link">20251118：競賽作品</a>
+        </div>
+    </div>
+</nav>
+<script>
+    document.getElementById('menuBtn').onclick = function(e) {
+        e.stopPropagation();
+        var menu = document.getElementById('dropdownMenu');
+        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    };
+    document.addEventListener('click', function(e) {
+        var menu = document.getElementById('dropdownMenu');
+        if(menu) menu.style.display = 'none';
+    });
+</script>
+
+
+<!--header-->
+    <header>
+        <h1>歡迎來到我的網站</h1>
+        <p>這是網頁的標頭區域</p>
+    </header>
+
+
+<!--作品展示-->
+    <main>
+       
+    </main>
+
+
+<!--聯絡方式-->   
+    <footer>
+        
+    </footer>
+</body>
+</html>
