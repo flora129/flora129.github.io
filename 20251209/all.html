@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基本網頁架構</title>
+    <title>期末</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; }
         nav { background: #4CAF50; color: #fff; padding: 1em; }
@@ -24,25 +24,28 @@
         .dropdown-link:hover {
           background: #e6e0fa !important;
         }
+        .contents-link:hover{
+          color: #e6e0fa !important;
+        }
     </style>
 </head>
 
 <body>
 <!--navbar-->
-    <nav style="display: flex; align-items: center; justify-content: space-between; background: linear-gradient(90deg, #b6c6f5 0%, #a18cd1 100%); color: #222; padding: 1em 2em; box-shadow: 0 4px 16px rgba(161,140,209,0.10); border-radius: 0 0 24px 24px;">
+    <nav style="display: flex; align-items: center; justify-content: space-between; background: linear-gradient(90deg, #b6c6f5 0%, #a18cd1 100%); color: #222; padding: 1em 2em; box-shadow: 0 4px 16px rgba(161,140,209,0.10);">
     <!-- 左側 Logo -->
     <div style="width:110px; animation: bounce 1.2s infinite alternate;">
-        <img src="logo.png" alt="我的Logo" style="width:90px; vertical-align: middle; border-radius:50%; box-shadow:0 2px 8px rgba(161,140,209,0.15);">
+        <a href="all.html"><img src="logo.png" alt="我的Logo" style="width:110px; vertical-align: middle; border-radius:50%; box-shadow:0 2px 8px rgba(161,140,209,0.15);"></a>
     </div>
     <!-- 中間連結 -->
     <div style="display:flex; gap:2em;">
-        <a href="#about" style="color: #222; text-decoration: none; font-weight:700; font-size:1.2em; padding:0.5em 1em; border-radius:8px; transition: background 0.2s; background:none;">自我介紹</a>
-        <a href="#works" style="color: #222; text-decoration: none; font-weight:700; font-size:1.2em; padding:0.5em 1em; border-radius:8px; transition: background 0.2s; background:none;">作品展示</a>
-        <a href="#contact" style="color: #222; text-decoration: none; font-weight:700; font-size:1.2em; padding:0.5em 1em; border-radius:8px; transition: background 0.2s; background:none;">聯絡方式</a>
+        <a href="#about" class="contents-link" style="color: #222; text-decoration: none; font-weight:700; font-size:1.2em; padding:0.5em 1em; border-radius:8px; transition: background 0.2s; background:none;">自我介紹</a>
+        <a href="#works" class="contents-link" style="color: #222; text-decoration: none; font-weight:700; font-size:1.2em; padding:0.5em 1em; border-radius:8px; transition: background 0.2s; background:none;">作品展示</a>
+        <a href="#contact" class="contents-link" style="color: #222; text-decoration: none; font-weight:700; font-size:1.2em; padding:0.5em 1em; border-radius:8px; transition: background 0.2s; background:none;">聯絡方式</a>
     </div>
     <!-- 右側三條線下拉選單 -->
     <div style="position:relative;">
-        <button id="menuBtn" style="background:linear-gradient(90deg,#a18cd1,#b6c6f5); border:none; cursor:pointer; font-size:2.2em; color:#222; padding:0.3em 0.7em; border-radius:12px; box-shadow:0 2px 8px rgba(161,140,209,0.10); transition:background 0.2s;">&#9776;</button>
+        <button id="menuBtn" style="background:linear-gradient(90deg,#9c87ce,#b6c6f5); border:none; cursor:pointer; font-size:2.2em; color:#222; padding:0.3em 0.7em; border-radius:12px; box-shadow:0 2px 8px rgba(161,140,209,0.10); transition:background 0.2s;">&#9776;</button>
         <div id="dropdownMenu" style="display:none; position:absolute; right:0; top:2.8em; background:#f6f3ff; box-shadow:0 4px 16px rgba(161,140,209,0.18); min-width:200px; border-radius:16px; overflow:hidden;">
             <a href="../20250930/index.html" target="_blank" class="dropdown-link">20250930：插畫作品</a>
             <a href="../20251007/index.html" target="_blank" class="dropdown-link">20251007：攝影作品</a>
