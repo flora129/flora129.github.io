@@ -9,6 +9,19 @@
     <!--2-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <style>
+      .lead{
+        font-size: 1.5rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 1000;
+      }
+      .display-5{
+        font-size: 3rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 1000;
+      }
+      .carousel-inner {
+        height: 800px;
+      }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -85,6 +98,17 @@
         background-color: #676c9e !important; /* Bootstrap 紫色 */
         color: #fff !important;
     }
+
+    /* ===== Preview box (fixed square for works) ===== */
+    .preview-frame { width: 80%; margin: 0 auto; }
+    .preview-box { width: 100%; height: 300px; border-radius: 21px 21px 0 0; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+    .preview-box.bg-black { background: #000; }
+    .preview-box.bg-white { background: #fff; }
+    /* Fill the box: cover and center */
+    .preview-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display:block; }
+    .work-link { color: inherit; text-decoration: none; display: block; }
+    .work-link:hover { text-decoration: none; }
+
     </style>
   </head>
 
@@ -187,88 +211,128 @@
             <div class="row my-md-3">
                 <div class="col-md-6 mb-3">
                     <div class="text-bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded h-100">
-                        <div class="my-3 py-3">
-                            <h2 class="display-5">1</h2>
-                            <p class="lead">And an even wittier subheading.</p>
-                        </div>
-                        <div class="bg-body-tertiary shadow-sm mx-auto"
-                            style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"></div>
+                        <a href="https://sites.google.com/stu.ntue.edu.tw/yuwen/%E9%A6%96%E9%A0%81" target="_blank" class="work-link">
+                          <div class="my-3 py-3">
+                              <h2 class="display-5">20250916</h2>
+                              <p class="lead">Wen所未聞</p>
+                          </div>
+                          <div class="preview-frame">
+                            <div class="preview-box bg-black shadow-sm mx-auto" style="border-radius: 21px 21px 0 0; width: 80%; height: 300px;">
+                              <img src="20250916.jpg" alt="作品 1 預覽" class="preview-img">
+                            </div>
+                          </div>
+                        </a> 
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="bg-body-tertiary pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded h-100">
-                        <div class="my-3 p-3">
-                            <h2 class="display-5">2</h2>
-                            <p class="lead">And an even wittier subheading.</p>
-                        </div>
-                        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0">
-                        </div>
+                        <a href="old_index.html" target="_blank" class="work-link">
+                          <div class="my-3 p-3">
+                              <h2 class="display-5">20250923</h2>
+                              <p class="lead">I LOVE JAPEN</p>
+                          </div>
+                          <div class="preview-frame">
+                            <div class="preview-box bg-black shadow-sm mx-auto" style="border-radius: 21px 21px 0 0; width: 80%; height: 300px;">
+                              <img src="japen.png" alt="作品 2 預覽" class="preview-img">
+                            </div>
+                          </div>
+                        </a> 
                     </div>
                 </div>
             </div>
             <div class="row my-md-3">
                 <div class="col-md-6 mb-3">
                     <div class="text-bg-secondary pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded h-100">
-                        <div class="my-3 p-3">
-                            <h2 class="display-5">3</h2>
-                            <p class="lead">And an even wittier subheading.</p>
-                        </div>
-                        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0">
-                        </div>
+                        <a href="20251007/index.html" target="_blank" class="work-link">
+                          <div class="my-3 p-3">
+                              <h2 class="display-5">20251007</h2>
+                              <p class="lead">旅行回憶</p>
+                          </div>
+                          <div class="preview-frame">
+                            <div class="preview-box bg-black shadow-sm mx-auto" style="border-radius: 21px 21px 0 0; width: 80%; height: 300px;">
+                              <img src="20251007/city1.jpg" alt="作品 3 預覽" class="preview-img">
+                            </div>
+                          </div>
+                        </a> 
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="text-bg-purple pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded h-100">
-                        <div class="my-3 py-3">
-                            <h2 class="display-5">4</h2>
-                            <p class="lead">And an even wittier subheading.</p>
-                        </div>
-                        <div class="bg-body-tertiary shadow-sm mx-auto"
-                            style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"></div>
+                        <a href="20251014/namecard.html" target="_blank" class="work-link">
+                          <div class="my-3 py-3">
+                              <h2 class="display-5">20251014</h2>
+                              <p class="lead">名片設計</p>
+                          </div>
+                          <div class="preview-frame">
+                            <div class="preview-box bg-black shadow-sm mx-auto" style="border-radius: 21px 21px 0 0; width: 80%; height: 300px;">
+                              <img src="namecard pic.png" alt="作品 4 預覽" class="preview-img">
+                            </div>
+                          </div>
+                        </a> 
                     </div>
                 </div>
             </div>
             <div class="row my-md-3">
                 <div class="col-md-6 mb-3">
                     <div class="text-bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded h-100">
-                        <div class="my-3 p-3">
-                            <h2 class="display-5">5</h2>
-                            <p class="lead">And an even wittier subheading.</p>
-                        </div>
-                        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0">
-                        </div>
+                        <a href="20251014/add.html" target="_blank" class="work-link">
+                          <div class="my-3 p-3">
+                              <h2 class="display-5">20251014</h2>
+                              <p class="lead">旅遊相片牆</p>
+                          </div>
+                          <div class="preview-frame">
+                            <div class="preview-box bg-black shadow-sm mx-auto" style="border-radius: 21px 21px 0 0; width: 80%; height: 300px;">
+                              <img src="20251014/city2.jpg" alt="作品 5 預覽" class="preview-img">
+                            </div>
+                          </div>
+                        </a> 
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="bg-body-tertiary pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded h-100">
-                        <div class="my-3 py-3">
-                            <h2 class="display-5">6</h2>
-                            <p class="lead">And an even wittier subheading.</p>
-                        </div>
-                        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0">
-                        </div>
+                        <a href="20251021/homework.html" target="_blank" class="work-link">
+                          <div class="my-3 py-3">
+                              <h2 class="display-5">20251021</h2>
+                              <p class="lead">異世界的浪漫</p>
+                          </div>
+                          <div class="preview-frame">
+                            <div class="preview-box bg-black shadow-sm mx-auto" style="border-radius: 21px 21px 0 0; width: 80%; height: 300px;">
+                              <img src="20251021/w3images/1-0.header.jpeg" alt="作品 6 預覽" class="preview-img">
+                            </div>
+                          </div>
+                        </a> 
                     </div>
                 </div>
             </div>
             <div class="row my-md-3">
                 <div class="col-md-6 mb-3">
                     <div class="text-bg-secondary pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded h-100">
-                        <div class="my-3 p-3">
-                            <h2 class="display-5">7</h2>
-                            <p class="lead">And an even wittier subheading.</p>
-                        </div>
-                        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0">
-                        </div>
+                        <a href="20251118/index.html" target="_blank" class="work-link">
+                          <div class="my-3 p-3">
+                              <h2 class="display-5">20251118</h2>
+                              <p class="lead">拒絕霸凌，從你我做起</p>
+                          </div>
+                          <div class="preview-frame">
+                            <div class="preview-box bg-black shadow-sm mx-auto" style="border-radius: 21px 21px 0 0; width: 80%; height: 300px;">
+                              <img src="20251118/bully.png" alt="作品 7 預覽" class="preview-img">
+                            </div>
+                          </div>
+                        </a> 
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="text-bg-purple pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded h-100">
-                        <div class="my-3 py-3">
-                            <h2 class="display-5">8</h2>
-                            <p class="lead">And an even wittier subheading.</p>
-                        </div>
-                        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0">
-                        </div>
+                        <a href="20251118/114_competition/index.html" target="_blank" class="work-link">
+                          <div class="my-3 py-3">
+                              <h2 class="display-5">20251118</h2>
+                              <p class="lead">NTUE設計競賽宣傳</p>
+                          </div>
+                          <div class="preview-frame">
+                            <div class="preview-box bg-black shadow-sm mx-auto" style="border-radius: 21px 21px 0 0; width: 80%; height: 300px;">
+                              <img src="20251118/114_competition/images/header.png" alt="作品 8 預覽" class="preview-img">
+                            </div>
+                          </div>
+                        </a> 
                     </div>
                 </div>
             </div>
